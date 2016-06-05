@@ -1,0 +1,83 @@
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+<title>Designer. Developer. Tech Enthusiast. | Jayson Kadlecek</title>
+<meta name="description" content="" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="style/build/main.min.css">
+</head>
+<body>
+<div class="scroll hidden-xs">
+  <ul class="section table-of-contents">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact" id="contact-link">Contact</a></li>
+  </ul>
+</div>
+	<div id="home" class="section scrollspy">
+		<div class="container">
+			<div class="col-sm-6">
+				<div class="headline pull-right">
+					<h1 class="my-name">Jayson Kadlecek</h1>
+					<h3 class="sub-title">Designer. Developer. Tech Enthusiast.</h3>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<img src="images/close-up-about-cutout.png" class="pull-left">
+			</div>
+		</div>
+	</div>
+	<div id="about" class="section scrollspy">
+		<div class="container">
+			<p>Content </p>
+		</div>
+	</div>
+	<div id="projects" class="section scrollspy">
+		<p>Content </p>
+	</div>
+	<div id="skills" class="section scrollspy">
+		<p>Content </p>
+	</div>
+	<div id="contact" class="section scrollspy">
+		<div class="container">
+		<p>Content </p>
+		</div>
+	</div>
+
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="js/build/main.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<script>
+  $(document).ready(function(){
+  	$(document).on("scroll", onScroll);
+    $('.scrollspy').scrollSpy({
+    	offset: {
+    		top: 0,
+    	}
+    });
+
+    function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('.table-of-contents a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos + 200 && refElement.position().top + refElement.height() > scrollPos + 200) {
+        	// || $('.table-of-contents a#contact-link').hasClass('active') place this in if we want the color to correspond w/ link
+            if(refElement.selector == "#contact") {
+            	$('.table-of-contents').addClass("alt-menu");
+        	} else {
+            	$('.table-of-contents').removeClass("alt-menu");
+        	}
+       	}
+    });
+	}
+ });
+</script>
+</body>
+</html>

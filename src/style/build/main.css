@@ -1,0 +1,53 @@
+.cool {
+  color: #000; }
+
+html {
+  font-family: 'Roboto'; }
+
+.scroll {
+  font-family: "Roboto";
+  position: fixed;
+  top: 200px;
+  right: 0; }
+  .scroll ul.table-of-contents {
+    width: 150px; }
+    .scroll ul.table-of-contents li a {
+      text-decoration: none;
+      border-color: #27a9e1; }
+    .scroll ul.table-of-contents.alt-menu li a {
+      transition: color .23s ease-in;
+      transition: border-color .23s ease-in;
+      color: #fff;
+      border-color: #fff; }
+
+.section.scrollspy {
+  padding-bottom: 0; }
+  .section.scrollspy .container {
+    padding: 100px 0 100px 0; }
+  .section.scrollspy#home {
+    font-family: 'Roboto'; }
+    .section.scrollspy#home .container {
+      padding-top: 50px;
+      padding-bottom: 0; }
+    .section.scrollspy#home .headline {
+      margin-top: 150px;
+      text-align: right; }
+    .section.scrollspy#home img {
+      height: 400px; }
+    .section.scrollspy#home h1.my-name {
+      margin-bottom: 0;
+      font-size: 28pt;
+      font-weight: 300;
+      color: #636364; }
+    .section.scrollspy#home h3.sub-title {
+      margin-top: 5px;
+      color: #757575;
+      font-size: 12pt;
+      font-weight: 300;
+      text-transform: normal; }
+  .section.scrollspy#about {
+    color: #757575;
+    background-color: #f5f6f6; }
+  .section.scrollspy#contact {
+    color: #fff;
+    background-color: #27a9e1; }

@@ -1,0 +1,79 @@
+@import 'header';
+$header-gray:#636364;
+$text-gray:#757575;
+$section-gray:#f5f6f6;
+
+
+html {
+	font-family:'Roboto';
+}
+
+.scroll {
+	font-family:"Roboto";
+	position:fixed;
+	top:200px;
+	right:0;
+	ul {
+		&.table-of-contents {
+			width:150px;
+			li {
+				a {
+					text-decoration: none;
+					border-color:#27a9e1;
+				}
+			}
+			&.alt-menu {
+				li {
+					a {
+						transition:color .23s ease-in;
+						transition:border-color .23s ease-in;
+						color:#fff;
+						border-color:#fff;
+					}
+				}
+			}
+		}
+	}
+}
+
+.section.scrollspy {
+	padding-bottom:0;
+	.container {
+		padding:100px 0 100px 0;
+	}
+	&#home {
+		.container {
+			padding-top:50px;
+			padding-bottom:0;
+		}
+		font-family:'Roboto';
+		.headline {
+			margin-top:150px;
+			text-align: right;
+		}
+		img {
+			height:400px;
+		}
+		h1.my-name {
+			margin-bottom:0;
+			font-size:28pt;
+			font-weight:300;
+			color:$header-gray;
+		}
+		h3.sub-title {
+			margin-top:5px;
+			color:$text-gray;
+			font-size:12pt;
+			font-weight:300;
+			text-transform: normal;
+		}
+	}
+	&#about {
+		color:$text-gray;
+		background-color:$section-gray;
+	}
+	&#contact {
+		color:#fff;
+		background-color:#27a9e1;
+	}
+}
