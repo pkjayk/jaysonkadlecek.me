@@ -1,7 +1,10 @@
 @import 'header';
+@import 'materialize';
 $header-gray:#636364;
 $text-gray:#757575;
 $section-gray:#f5f6f6;
+$dark-gray:#404041;
+$light-blue: #27a9e1;
 
 
 html {
@@ -13,6 +16,7 @@ html {
 	position:fixed;
 	top:200px;
 	right:0;
+	z-index:999;
 	ul {
 		&.table-of-contents {
 			width:150px;
@@ -36,6 +40,47 @@ html {
 	}
 }
 
+h2.special-title {
+	font-family:'Roboto';
+	position:relative;
+	display:inline-block;
+	text-transform:uppercase;
+	color:$text-gray;
+	font-size:12pt;
+	font-weight:400;
+	line-height:3;
+	margin-bottom:30px;
+	.border-bottom {
+	  border-bottom: 2px solid $light-blue;
+	  position: absolute;
+	  bottom: 0;
+	  left:0;
+	  width:50%;
+	  &.white {
+	  	border-color:#fff;
+	  }
+	  &.orange {
+	  	border-color:#f79420;
+	  }
+	}
+}
+h2.special-title-2 {
+	font-family:'Roboto Slab';
+	font-weight:300;
+	font-size:26pt;
+	padding-top:0;
+	margin-top:0;
+}
+p {
+	&.gray-paragraph {
+		color:$text-gray;
+		font-family:'Roboto';
+		font-weight:300;
+		font-size:12pt;
+		line-height:1.7;
+	}
+}
+
 .section.scrollspy {
 	padding-bottom:0;
 	.container {
@@ -43,12 +88,12 @@ html {
 	}
 	&#home {
 		.container {
-			padding-top:50px;
+			padding-top:150px;
 			padding-bottom:0;
 		}
 		font-family:'Roboto';
 		.headline {
-			margin-top:150px;
+			margin-top:125px;
 			text-align: right;
 		}
 		img {
@@ -71,9 +116,62 @@ html {
 	&#about {
 		color:$text-gray;
 		background-color:$section-gray;
+		.hobbies {
+			&.collection {
+				margin-top:30px;
+				transition:all .4s ease-in;
+				&:hover {
+					@extend .z-depth-1;
+				}
+				h4 {
+					font-size:16pt;
+					font-weight:300;
+					font-family:'Roboto Slab';
+				}
+				font-size:12pt;
+				color:$dark-gray;
+			}
+		}
+	}
+	&#projects {
+		.card.medium {
+			box-shadow:none;
+			border:1px solid #f6f6f6;
+			.simpleLift {
+				padding:20px;
+				background-color:$light-blue;
+				img {
+					width:200px;
+					max-width:100%;
+					margin:0 auto;
+				}
+			}
+			&:hover {
+				@extend .z-depth-1;
+			}
+		}
+	}
+	&#skills {
+		padding-top:0;
+		position:relative;
+		color:#fff;
+		h2.special-title {
+			color:#fff;
+		}
+		div.overlay {
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background-color:rgba(247,147,29,0.2);
+		}
+		.collapsible {
+			color:$dark-gray;
+		}
 	}
 	&#contact {
 		color:#fff;
-		background-color:#27a9e1;
+		background-color:$light-blue;
 	}
 }
