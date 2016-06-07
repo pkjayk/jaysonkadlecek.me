@@ -5428,7 +5428,7 @@ ul {
 .z-depth-0 {
   box-shadow: none !important; }
 
-.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav, .section.scrollspy#about .hobbies.collection:hover, .section.scrollspy#projects .card.medium:hover {
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav, .section.scrollspy#about .hobbies.collection:hover, .section.scrollspy#projects .card.medium:hover, .section.scrollspy#contact .collection, .section.scrollspy#contact div.form-container {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 .z-depth-1-half, .btn:hover, .btn-large:hover, .btn-floating:hover {
@@ -9567,6 +9567,9 @@ html {
       color: #fff;
       border-color: #fff; }
 
+.jk-light-blue {
+  background-color: #27a9e1 !important; }
+
 h2.special-title {
   font-family: 'Roboto';
   position: relative;
@@ -9672,6 +9675,18 @@ p.gray-paragraph {
       .section.scrollspy#projects .card.medium .zach-nelson img {
         width: 273px;
         margin: 0 auto; }
+    .section.scrollspy#projects .card.medium .codia-us {
+      padding: 20px;
+      background-color: #f79420; }
+      .section.scrollspy#projects .card.medium .codia-us img {
+        width: 225px;
+        margin: 0 auto; }
+    .section.scrollspy#projects .card.medium .vsa {
+      padding: 20px;
+      background-color: #000; }
+      .section.scrollspy#projects .card.medium .vsa img {
+        width: 260px;
+        margin: 0 auto; }
   .section.scrollspy#skills {
     padding-top: 0;
     position: relative;
@@ -9710,5 +9725,52 @@ p.gray-paragraph {
   .section.scrollspy#contact {
     color: #fff;
     background-color: #27a9e1; }
+    .section.scrollspy#contact .container {
+      padding-bottom: 0; }
+    .section.scrollspy#contact .collection {
+      margin-top: 0;
+      color: #404041;
+      border: none; }
+      .section.scrollspy#contact .collection .collection-super-header {
+        background-color: #0288bc;
+        min-height: 150px; }
+      .section.scrollspy#contact .collection h4 {
+        font-size: 16pt;
+        font-weight: 300;
+        font-family: 'Roboto Slab'; }
     .section.scrollspy#contact h2.special-title {
       color: #fff; }
+    .section.scrollspy#contact div.form-container {
+      transition: box-shadow .2s ease-in;
+      background-color: #fff;
+      padding: 20px;
+      color: #404041; }
+      .section.scrollspy#contact div.form-container div.row {
+        margin-bottom: 0; }
+      .section.scrollspy#contact div.form-container .btn-large {
+        margin-top: 20px;
+        width: 100%;
+        border-radius: 0;
+        background-color: #27a9e1;
+        font-weight: 600; }
+        .section.scrollspy#contact div.form-container .btn-large:hover {
+          color: #fff; }
+    .section.scrollspy#contact div.footer {
+      margin-top: 80px;
+      padding-top: 30px;
+      padding-bottom: 15px;
+      border-top: 1px solid #0288bc;
+      color: #0288bc; }
+
+/* label underline focus color */
+.input-field input[type=text]:focus, .input-field input[type=tel]:focus, .input-field input[type=email]:focus {
+  border-bottom: 1px solid #27a9e1;
+  box-shadow: 0 1px 0 0 #27a9e1; }
+  .input-field input[type=text]:focus + label, .input-field input[type=tel]:focus + label, .input-field input[type=email]:focus + label {
+    color: #27a9e1; }
+
+textarea.materialize-textarea:focus {
+  border-bottom: 1px solid #27a9e1 !important;
+  box-shadow: 0 1px 0 0 #27a9e1 !important; }
+  textarea.materialize-textarea:focus + label {
+    color: #27a9e1 !important; }
