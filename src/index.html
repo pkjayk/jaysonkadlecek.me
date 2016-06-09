@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="style/build/main.min.css">
 </head>
 <body>
-<div class="scroll hidden-xs wow fadeIn">
+<div class="scroll hidden-xs">
   <ul class="section table-of-contents">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -43,12 +43,12 @@
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum massa arcu, bibendum eu orci sit amet, viverra tincidunt risus. Donec sed viverra lorem. Mauris ultrices erat erat, pharetra aliquet tortor ornare in. Cras vestibulum mauris ut accumsan maximus. Fusce eget malesuada mauris. Sed blandit est nec nisi placerat, sed eleifend ligula bibendum. Phasellus placerat tortor sed libero malesuada, non congue erat posuere. Duis porta luctus tincidunt. Maecenas pulvinar tristique sem.
 			</p>
 			<ul class="hobbies collection with-header">
-				<li class="collection-header"><h4>My Hobbies <small style="color:#e0e0e0;font-size:10pt">(away from the computer)</small></h4></li>
-				<li class="collection-item">Hanging out with my puppy</li>
-				<li class="collection-item">Playing tennis</li>
-				<li class="collection-item">Going to the beach</li>
-				<li class="collection-item">Lifting weights</li>
-				<li class="collection-item">Reading non-fiction books</li>
+				<li class="collection-header" style="position:relative;z-index:2"><h4>My Hobbies <small style="color:#e0e0e0;font-size:10pt">(away from the computer)</small></h4></li>
+				<li class="collection-item wow fadeIn" data-wow-delay="0s">Hanging out with my puppy</li>
+				<li class="collection-item wow fadeIn" data-wow-delay="0.1s">Playing tennis</li>
+				<li class="collection-item wow fadeIn" data-wow-delay="0.2s">Going to the beach</li>
+				<li class="collection-item wow fadeIn" data-wow-delay="0.3s">Lifting weights</li>
+				<li class="collection-item wow fadeIn" data-wow-delay="0.4s">Reading non-fiction books</li>
 			</ul>
 		</div>
 	</div>
@@ -60,23 +60,40 @@
 			<h2 class="special-title-2">All crafted with love.</h2>
 			<div class="row">
 	     		<div class="col-md-4">
-					<div class="card medium wow fadeInRight">
-		              <div class="card-image simpleLift waves-effect waves-block waves-light">
+					<div class="card medium wow fadeInRight" data-wow-delay="0.4s">
+		              <a class="modal-trigger" href="#modal1"><div class="card-image simpleLift waves-effect waves-block waves-light">
 		                <img class="activator" src="images/simpleLift-logo.png">
-		              </div>
+		              </div></a>
 		              <div class="card-content">
 		                <span class="card-title activator grey-text text-darken-4">simpleLift Design</span>
 		                <p>I wireframed and prototyped the iOS app using user-centered design techniques.  Extensive UX Strategy to guide development along the way.</p>
 		              </div>
 
 		              <div class="card-action">
-		                <a href="#">Open Project <i class="fa fa-long-arrow-right"></i></a>
+		                <a class="modal-trigger" href="#modal1">Open Project <i class="fa fa-long-arrow-right"></i></a>
 		              </div>
 		            </div>
+		            <!-- Begin Modal for simpleLift -->
+					  <div id="modal1" class="modal modal-fixed-footer">
+					    <div class="modal-content">
+						<h2 class="special-title">simpleLift Design Process
+							<span class="border-bottom"></span>
+						</h2>
+						<h2 class="special-title-2">Starting with a sharpie and a piece of paper.  <small style="font-size:11pt;font-family:'Roboto'">Sketching the big picture.</small></h2>
+						<img src="images/simpleLift-wireframe.jpg" style="max-width:100%;">
+						<h2 class="special-title-2" style="margin-top:60px;">High-fidelity mockup time.</h2>
+						<h2 class="special-title-2" style="margin-top:60px;">Prototyping with Invision.</h2>
+					    </div>
+					    <div class="modal-footer">
+					      <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat red lighten-1" style="color:#fff;font-weight:600;text-decoration:none">X</a>
+					    </div>
+					  </div>
+					<!-- end Modal -->
+          
 		        </div>
 	     		<div class="col-md-4">
 					<div class="card medium" style="z-index:99">
-		              <div class="card-image simpleLift waves-effect waves-block waves-light" style="padding:5px;background-color:#00adef">
+		              <div class="card-image modal-trigger simpleLift-coding waves-effect waves-block waves-light" style="padding:5px;background-color:#00adef" href="#modal-simplelift-dev">
 		                <img class="activator" src="images/simpleLift-namespace.png" style="width:100%;">
 		              </div>
 		              <div class="card-content">
@@ -86,13 +103,32 @@
 		              </div>
 
 		              <div class="card-action">
-		                <a href="#">Open Project <i class="fa fa-long-arrow-right"></i></a>
+		                <a href="#modal-simplelift-dev" class="modal-trigger">Open Project <i class="fa fa-long-arrow-right"></i></a>
 		              </div>
 		            </div>
+		            <!-- Begin Modal for simpleLift Dev -->
+					  <div id="modal-simplelift-dev" class="modal modal-fixed-footer">
+					    <div class="modal-content">
+						<h2 class="special-title">simpleLift Development
+							<span class="border-bottom white"></span>
+						</h2>
+						<h2 class="special-title-2">RESTful API Development.</h2>
+						<p>
+						I built this API using the PHP MVC framework CodeIgniter.  It utilizes Parse (BaaS) for database processes, while also using AWS S3 for image storage.  
+						</p>
+						<p>
+						I programmed it using test-driven development techniques and have been constantly refactoring and optimizing the code to make it as fast as possible.
+						</p>
+					    </div>
+					    <div class="modal-footer">
+					      <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat red lighten-1" style="color:#fff;font-weight:600;text-decoration:none">X</a>
+					    </div>
+					  </div>
+					<!-- end Modal -->
 		        </div>
 	     		<div class="col-md-4">
-					<div class="card medium wow fadeInLeft">
-		              <div class="card-image kadalyst-design waves-effect waves-block waves-light">
+					<div class="card medium wow fadeInLeft" data-wow-delay="0.4s">
+		              <div class="card-image kadalyst-design waves-effect waves-block waves-light modal-trigger" href="#modal-kadalyst-design">
 		                <img class="activator" src="images/kadalyst-design-logo.png">
 		              </div>
 		              <div class="card-content">
@@ -100,17 +136,36 @@
 
 		                <p>Complete web, logo, landing page design.  Ran multiple experiments to A/B test landing pages and improve user interface.</p>
 		              </div>
-
 		              <div class="card-action">
-		                <a href="#">Open Project <i class="fa fa-long-arrow-right"></i></a>
+		                <a href="#modal-kadalyst-design" class="modal-trigger">Open Project <i class="fa fa-long-arrow-right"></i></a>
 		              </div>
 		            </div>
+		            <!-- Begin Modal for Kadalyst Design -->
+					  <div id="modal-kadalyst-design" class="modal modal-fixed-footer">
+					    <div class="modal-content">
+						<h2 class="special-title">Kadalyst Design
+							<span class="border-bottom orange"></span>
+						</h2>
+						<h2 class="special-title-2">My web design business.</h2>
+						<p>
+						I built this API using the PHP MVC framework CodeIgniter.  It utilizes Parse (BaaS) for database processes, while also using AWS S3 for image storage.  
+						</p>
+						<p>
+						I programmed it using test-driven development techniques and have been constantly refactoring and optimizing the code to make it as fast as possible.
+						</p>
+					    </div>
+					    <div class="modal-footer">
+					            <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat red lighten-1" style="color:#fff;font-weight:600;text-decoration:none">X</a>
+					            <a href="http://www.kadalystdesign.com" class=" modal-action modal-close waves-effect waves-green btn-flat" target="_blank" style="color:#fff;font-weight:400;margin-right:10px;text-decoration:none;background-color:#454a5f">Open the Site</a>
+					    </div>
+					  </div>
+					<!-- end Modal -->
 		        </div>
 			</div>
 			<div class="row">
 	     		<div class="col-md-4">
-					<div class="card medium wow fadeInRight">
-		              <div class="card-image zach-nelson waves-effect waves-block waves-light">
+					<div class="card medium wow fadeInRight" data-wow-delay="0.4s">
+		              <div class="card-image zach-nelson waves-effect waves-block waves-light modal-trigger" href="#modal-zach-nelson">
 		                <img class="activator" src="images/zach-nelson-logos.png">
 		              </div>
 		              <div class="card-content">
@@ -120,13 +175,33 @@
 		              </div>
 
 		              <div class="card-action">
-		                <a href="#">Open Project <i class="fa fa-long-arrow-right"></i></a>
+		                <a href="#modal-zach-nelson" class="modal-trigger">Open Project <i class="fa fa-long-arrow-right"></i></a>
 		              </div>
 		            </div>
+		            <!-- Begin Modal for Kadalyst Design -->
+					  <div id="modal-zach-nelson" class="modal modal-fixed-footer">
+					    <div class="modal-content">
+						<h2 class="special-title">Kadalyst Design
+							<span class="border-bottom white"></span>
+						</h2>
+						<h2 class="special-title-2">My web design business.</h2>
+						<p>
+						I built this API using the PHP MVC framework CodeIgniter.  It utilizes Parse (BaaS) for database processes, while also using AWS S3 for image storage.  
+						</p>
+						<p>
+						I programmed it using test-driven development techniques and have been constantly refactoring and optimizing the code to make it as fast as possible.
+						</p>
+					    </div>
+					    <div class="modal-footer">
+					            <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat red lighten-1" style="color:#fff;font-weight:600;text-decoration:none">X</a>
+					            <a href="http://www.zachnelsonmusic.com" class=" modal-action modal-close waves-effect waves-green btn-flat" target="_blank" style="color:#e4c120;font-weight:500;margin-right:10px;text-decoration:none;background-color:#000">Open the Site</a>
+					    </div>
+					  </div>
+					<!-- end Modal -->
 		        </div>
 	     		<div class="col-md-4">
 					<div class="card medium" style="z-index:99;">
-		              <div class="card-image codia-us waves-effect waves-block waves-light">
+		              <div class="card-image codia-us waves-effect waves-block waves-light modal-trigger" href="#modal-codia-us">
 		                <img class="activator" src="images/codia-us-logo.png">
 		              </div>
 		              <div class="card-content">
@@ -136,13 +211,33 @@
 		              </div>
 
 		              <div class="card-action">
-		                <a href="#">Open Project <i class="fa fa-long-arrow-right"></i></a>
+		                <a href="#modal-codia-us" class="modal-trigger">Open Project <i class="fa fa-long-arrow-right"></i></a>
 		              </div>
 		            </div>
+		            <!-- Begin Modal for Codia.us -->
+					  <div id="modal-codia-us" class="modal modal-fixed-footer">
+					    <div class="modal-content">
+						<h2 class="special-title">Codia.us Logo
+							<span class="border-bottom white"></span>
+						</h2>
+						<h2 class="special-title-2">My web design business.</h2>
+						<p>
+						I built this API using the PHP MVC framework CodeIgniter.  It utilizes Parse (BaaS) for database processes, while also using AWS S3 for image storage.  
+						</p>
+						<p>
+						I programmed it using test-driven development techniques and have been constantly refactoring and optimizing the code to make it as fast as possible.
+						</p>
+					    </div>
+					    <div class="modal-footer">
+					            <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat red lighten-1" style="color:#fff;font-weight:600;text-decoration:none">X</a>
+					            <a href="http://www.zachnelsonmusic.com" class=" modal-action modal-close waves-effect waves-green btn-flat" target="_blank" style="color:#fff;font-weight:500;margin-right:10px;text-decoration:none;background-color:#f79420">Open the Site</a>
+					    </div>
+					  </div>
+					<!-- end Modal -->
 		        </div>
 	     		<div class="col-md-4">
-					<div class="card medium wow fadeInLeft">
-		              <div class="card-image vsa waves-effect waves-block waves-light">
+					<div class="card medium wow fadeInLeft" data-wow-delay="0.4s">
+		              <div class="card-image vsa waves-effect waves-block waves-light modal-trigger" href="#modal-vsa">
 		                <img class="activator" src="images/vsa-light-logo-2.png">
 		              </div>
 		              <div class="card-content">
@@ -152,9 +247,29 @@
 		              </div>
 
 		              <div class="card-action">
-		                <a href="#">Open Project <i class="fa fa-long-arrow-right"></i></a>
+		                <a href="#modal-vsa" class="modal-trigger">Open Project <i class="fa fa-long-arrow-right"></i></a>
 		              </div>
 		            </div>
+		            <!-- Begin Modal for Codia.us -->
+					  <div id="modal-vsa" class="modal modal-fixed-footer">
+					    <div class="modal-content">
+						<h2 class="special-title">Veterans Sportsman Alliance
+							<span class="border-bottom white"></span>
+						</h2>
+						<h2 class="special-title-2">My web design business.</h2>
+						<p>
+						I built this API using the PHP MVC framework CodeIgniter.  It utilizes Parse (BaaS) for database processes, while also using AWS S3 for image storage.  
+						</p>
+						<p>
+						I programmed it using test-driven development techniques and have been constantly refactoring and optimizing the code to make it as fast as possible.
+						</p>
+					    </div>
+					    <div class="modal-footer">
+				            <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat red lighten-1" style="color:#fff;font-weight:600;text-decoration:none">X</a>
+				            <a href="http://www.veteranssportsmanalliance.org" class=" modal-action modal-close waves-effect waves-green btn-flat" target="_blank" style="color:#fff;font-weight:500;margin-right:10px;text-decoration:none;background-color:#000">Open the Site</a>
+					    </div>
+					  </div>
+					<!-- end Modal -->
 		        </div>
 			</div>
 			<div style="text-align:center;">
@@ -174,20 +289,63 @@
 		    	<div class="col-sm-8">
 					  <ul class="collapsible z-depth-2" data-collapsible="accordion">
 					    <li>
-					      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Design</div>
-					      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+					      <div class="collapsible-header"><i class="fa fa-pencil" aria-hidden="true"></i>Design</div>
+					      <div class="collapsible-body">
+					      	<ul class="within-collapsible-body">
+					      		<li>UX Strategy</li>
+					      		<li>UI/UX Design</li>
+					      		<li>Photoshop, Illustrator, Indesign, Sharpie & Paper</li>
+					      		<li>Wireframing</li>
+					      		<li>Designing User Flows</li>
+					      		<li>Prototyping
+					      			<ul>
+					      				<li>High-fidelity Mockups</li>
+					      				<li>Rapid Prototyping w/ CSS, HTML, JS</li>
+					      			</ul>
+					      		</li>
+					      		<li>Marketing Collateral
+					      			<ul>
+					      				<li>Landing Pages</li>
+					      				<li>Print Items</li>
+					      			</ul>
+					      		</li>
+					      	</ul>
+					      </div>
 					    </li>
 					    <li>
-					      <div class="collapsible-header"><i class="material-icons">place</i>Web</div>
-					      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+					      <div class="collapsible-header"><i class="fa fa-desktop" aria-hidden="true"></i>Web</div>
+					      <div class="collapsible-body">
+					      	<ul class="within-collapsible-body">
+					      		<li>Designing sites & landing pages from prototypes</li>
+					      		<li>Web Design & Development</li>
+					      		<li>Responsive Design</li>
+					      		<li>WordPress Theme Development</li>
+					      		<li>CSS3, HTML5, JavaScript</li>
+					      	</ul>
+					      </div>
 					    </li>
 					    <li>
-					      <div class="collapsible-header"><i class="material-icons">whatshot</i>Development</div>
-					      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+					      <div class="collapsible-header"><i class="fa fa-code" aria-hidden="true"></i>Development</div>
+					      <div class="collapsible-body">
+					      	<ul class="within-collapsible-body">
+					      		<li>RESTful API Development/Architecture</li>
+					      		<li>PHP & MySQL</li>
+					      		<li>Ruby on Rails</li>
+					      		<li>Github & Source Control</li>
+					      		<li>BaaS (Parse)</li>
+					      	</ul>
+					      </div>
 					    </li>
 					    <li>
-					      <div class="collapsible-header"><i class="material-icons">whatshot</i>Business</div>
-					      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+					      <div class="collapsible-header"><i class="fa fa-briefcase" aria-hidden="true"></i>Business</div>
+					      <div class="collapsible-body">
+					      	<ul class="within-collapsible-body">
+					      		<li>SEO Strategy & Implementation</li>
+					      		<li>Google Adwords</li>
+					      		<li>Google Analytics</li>
+					      		<li>Content Strategy</li>
+					      	</ul>
+					      </div>
 					    </li>
 					  </ul>
         
@@ -215,33 +373,34 @@
 				</div>
 				<div class="col-sm-7">
 					<div class="form-container">
-					  <div class="row">
-					    <form class="col s12">
+					<div id="thank-you" style="color:#0288bc"></div>
+					  <div class="row inner-form">
+					    <form class="col s12" id="the-form">
 					      <div class="row">
 					        <div class="input-field col s6">
-					          <input id="first_name" type="text" class="validate">
+					          <input id="first_name" type="text" name="first_name" class="validate">
 					          <label for="first_name">First Name</label>
 					        </div>
 					        <div class="input-field col s6">
-					          <input id="last_name" type="text" class="validate">
+					          <input id="last_name" name="last_name" type="text" class="validate">
 					          <label for="last_name">Last Name</label>
 					        </div>
 					      </div>
 					      <div class="row">
 					        <div class="input-field col s12">
-					          <input id="phone" type="tel" class="validate">
+					          <input id="phone" name="phone" type="tel">
 					          <label for="phone">Phone</label>
 					        </div>
 					      </div>
 					      <div class="row">
 					        <div class="input-field col s12">
-					          <input id="email" type="email" class="validate">
+					          <input id="email" name="email" type="email" class="validate">
 					          <label for="email">Email</label>
 					        </div>
 					      </div>
 					      <div class="row">
 					        <div class="input-field col s12">
-					          <textarea id="message" class="materialize-textarea validate"></textarea>
+					          <textarea id="message" name="message" class="materialize-textarea validate"></textarea>
 					          <label for="message">Message</label>
 					        </div>
 					      </div>
@@ -255,10 +414,10 @@
 			<div class="footer">
 				<div class="row">
 					<div class="col-sm-6">
-						Jayson Kadlecek
+						<span class="name">Jayson Kadlecek</span>
 					</div>
 					<div class="col-sm-6">
-						<div class="pull-right">&copy; 2016 Jayson Kadlecek</div>
+						<div class="copyright pull-right">&copy; 2016 Jayson Kadlecek</div>
 					</div>
 				</div>
 			</div>
@@ -269,6 +428,48 @@
 <script src="js/build/main.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 <script>
+$("document").ready(function(){
+  $("#the-form").submit(function(){
+    $(".error-success").removeClass("text-error");
+    var data = { "success": "n" };
+    data = $(this).serialize();
+    $.ajax({
+      type: "POST",
+      dataType: "JSON",
+      url: "/form-handler.php", 
+      data: data,
+      success: function(data) {
+          var obj = data;
+          if(obj.success == "y"){
+          	  // ga('send', 'pageview', '/goals/small-biz-informal/');
+              $(".inner-form").hide();
+              $("#thank-you").fadeIn("10000");
+              $("#thank-you").html(obj.finalMessage)
+          } 
+      },
+      error: function(data) {
+      	var obj = data.responseJSON;
+      	function updateInputClass()
+		{
+		    $(this).toggleClass('invalid', $.trim(this.value) == '');
+		}
+
+		$(".validate")
+		  .blur(updateInputClass)
+		  .each(updateInputClass)
+
+		if(obj.errorCode == "P1"){
+			$("#phone").addClass("invalid");
+		}
+        $(".error-success").show();
+        $(".error-success").addClass("text-error");
+        $(".error-success").html(obj.finalMessage);
+      }
+  });
+    return false;
+  });
+
+});
   $(document).ready(function(){	
 	new WOW().init();
 
@@ -294,6 +495,14 @@
     });
 	}
  });
+  $('.modal-trigger').leanModal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .8, // Opacity of modal background
+      in_duration: 300, // Transition in duration
+      out_duration: 200, // Transition out duration
+    }
+  );
+      
 </script>
 </body>
 </html>

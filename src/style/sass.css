@@ -6226,6 +6226,48 @@ html {
       color: #fff;
       border-color: #fff; }
 
+#modal-simplelift-dev {
+  color: #fff; }
+  #modal-simplelift-dev .modal-content {
+    background-color: #27a9e1; }
+    #modal-simplelift-dev .modal-content h2 {
+      color: #fff; }
+
+#modal-kadalyst-design .modal-content {
+  background-color: #454a5f;
+  color: #fff;
+  border: 1px solid #454a5f; }
+  #modal-kadalyst-design .modal-content h2 {
+    color: #fff; }
+
+#modal-zach-nelson .modal-content {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #000; }
+  #modal-zach-nelson .modal-content h2 {
+    color: #fff; }
+    #modal-zach-nelson .modal-content h2.special-title-2 {
+      color: #e4c120; }
+
+#modal-codia-us .modal-content {
+  color: #fff;
+  background-color: #f79420;
+  border: 1px solid #f79420; }
+  #modal-codia-us .modal-content h2 {
+    color: #fff; }
+
+#modal-vsa .modal-content {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #000; }
+  #modal-vsa .modal-content h2 {
+    color: #fff; }
+
+.modal-content {
+  border-radius: 0;
+  border: 1px solid #bfbfbf;
+  border-bottom: none; }
+
 .jk-light-blue {
   background-color: #27a9e1 !important; }
 
@@ -6273,9 +6315,15 @@ p.gray-paragraph {
     .section.scrollspy#home .container {
       padding-top: 150px;
       padding-bottom: 0; }
+      @media only screen and (max-width: 767px) {
+        .section.scrollspy#home .container {
+          padding-top: 0; } }
     .section.scrollspy#home .headline {
       margin-top: 125px;
       text-align: right; }
+      @media only screen and (max-width: 767px) {
+        .section.scrollspy#home .headline {
+          margin-top: 0; } }
     .section.scrollspy#home img {
       height: 400px; }
     .section.scrollspy#home h1.my-name {
@@ -6311,6 +6359,13 @@ p.gray-paragraph {
         font-size: 16pt;
         font-weight: 300;
         font-family: 'Roboto Slab'; }
+  @media only screen and (max-width: 768px) {
+    .section.scrollspy#projects .row {
+      margin-bottom: 0; } }
+  @media only screen and (max-width: 768px) {
+    .section.scrollspy#projects .card {
+      margin-top: 50px !important;
+      margin-bottom: 50px !important; } }
   .section.scrollspy#projects .card.medium {
     height: 450px;
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2); }
@@ -6321,6 +6376,12 @@ p.gray-paragraph {
       background-color: #27a9e1; }
       .section.scrollspy#projects .card.medium .simpleLift img {
         width: 200px;
+        margin: 0 auto; }
+    .section.scrollspy#projects .card.medium .simpleLift-coding {
+      padding: 20px;
+      background-color: #27a9e1; }
+      .section.scrollspy#projects .card.medium .simpleLift-coding img {
+        max-width: 300px;
         margin: 0 auto; }
     .section.scrollspy#projects .card.medium .kadalyst-design {
       padding: 20px;
@@ -6349,7 +6410,8 @@ p.gray-paragraph {
   .section.scrollspy#skills {
     padding-top: 0;
     position: relative;
-    color: #fff; }
+    color: #fff;
+    font-family: 'Roboto'; }
     .section.scrollspy#skills .parallax-container {
       min-height: 750px; }
     .section.scrollspy#skills h2.special-title {
@@ -6375,9 +6437,21 @@ p.gray-paragraph {
         border: none;
         color: #fff; }
       .section.scrollspy#skills .collapsible li .collapsible-body {
+        padding: 10px 0 10px 0;
         transition: background-color .2s ease-in;
         transition: color .2s ease-in;
         background-color: #fff; }
+      .section.scrollspy#skills .collapsible ul.within-collapsible-body {
+        margin-left: 30px;
+        /*				padding-top:15px;
+				padding-bottom:15px;
+*/ }
+        .section.scrollspy#skills .collapsible ul.within-collapsible-body li {
+          font-family: 'Roboto';
+          margin-top: 7px;
+          margin-bottom: 7px; }
+        .section.scrollspy#skills .collapsible ul.within-collapsible-body ul {
+          margin-left: 30px; }
     .section.scrollspy#skills img.graphic {
       height: 200px;
       margin: 0 auto; }
@@ -6407,6 +6481,7 @@ p.gray-paragraph {
       .section.scrollspy#contact div.form-container div.row {
         margin-bottom: 0; }
       .section.scrollspy#contact div.form-container .btn-large {
+        color: #fff;
         margin-top: 20px;
         width: 100%;
         border-radius: 0;
@@ -6419,7 +6494,20 @@ p.gray-paragraph {
       padding-top: 30px;
       padding-bottom: 15px;
       border-top: 1px solid #0288bc;
-      color: #0288bc; }
+      color: #0288bc;
+      font-family: 'Roboto'; }
+      @media only screen and (max-width: 768px) {
+        .section.scrollspy#contact div.footer {
+          text-align: center; } }
+      .section.scrollspy#contact div.footer span.name {
+        margin-top: 2px;
+        font-size: 16pt;
+        font-weight: 300; }
+      .section.scrollspy#contact div.footer div.copyright {
+        margin-top: 7px; }
+        @media only screen and (max-width: 768px) {
+          .section.scrollspy#contact div.footer div.copyright {
+            float: none !important; } }
 
 /* label underline focus color */
 .input-field input[type=text]:focus, .input-field input[type=tel]:focus, .input-field input[type=email]:focus {
