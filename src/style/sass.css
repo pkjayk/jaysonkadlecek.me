@@ -6209,12 +6209,30 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 html {
   font-family: 'Roboto'; }
 
+nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 998; }
+  @media only screen and (min-width: 631px) {
+    nav {
+      display: none; } }
+  nav a:hover {
+    text-decoration: none; }
+  nav a.button-collapse:hover {
+    color: #fff;
+    text-decoration: none; }
+
 .scroll {
   font-family: "Roboto";
   position: fixed;
   top: 200px;
   right: 0;
   z-index: 999; }
+  @media only screen and (max-width: 995px) {
+    .scroll {
+      display: none; } }
   .scroll ul.table-of-contents {
     width: 150px; }
     .scroll ul.table-of-contents li a {
@@ -6323,7 +6341,7 @@ p.gray-paragraph {
       text-align: right; }
       @media only screen and (max-width: 767px) {
         .section.scrollspy#home .headline {
-          margin-top: 0; } }
+          margin-top: 40px; } }
     .section.scrollspy#home img {
       height: 400px; }
     .section.scrollspy#home h1.my-name {
@@ -6413,7 +6431,7 @@ p.gray-paragraph {
     color: #fff;
     font-family: 'Roboto'; }
     .section.scrollspy#skills .parallax-container {
-      min-height: 750px; }
+      min-height: 925px; }
     .section.scrollspy#skills h2.special-title {
       color: #fff; }
     .section.scrollspy#skills div.overlay {

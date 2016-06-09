@@ -11,15 +11,31 @@
 <link rel="stylesheet" href="style/build/main.min.css">
 </head>
 <body>
-<div class="scroll hidden-xs">
-  <ul class="section table-of-contents">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills" id="skills-link">Skills</a></li>
-    <li><a href="#contact" id="contact-link">Contact</a></li>
-  </ul>
-</div>
+	<nav>
+	<div class="nav-wrapper">
+		<div class="container">
+			<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+			<ul class="side-nav" id="mobile-demo">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="scroll hidden-xs">
+	  <ul class="section table-of-contents">
+	    <li><a href="#home">Home</a></li>
+	    <li><a href="#about">About</a></li>
+	    <li><a href="#projects">Projects</a></li>
+	    <li><a href="#skills" id="skills-link">Skills</a></li>
+	    <li><a href="#contact" id="contact-link">Contact</a></li>
+	  </ul>
+  	</div>
+
 	<div id="home" class="section scrollspy">
 		<div class="container wow fadeIn">
 			<div class="col-sm-6">
@@ -432,6 +448,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 <script>
 $("document").ready(function(){
+  $(".button-collapse").sideNav();
+
   $("#the-form").submit(function(){
     $(".error-success").removeClass("text-error");
     var data = { "success": "n" };
