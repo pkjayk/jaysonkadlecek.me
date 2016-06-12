@@ -9550,6 +9550,13 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 html {
   font-family: 'Roboto'; }
 
+.icon-container {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 25px; }
+  .icon-container i {
+    margin-top: 15px; }
+
 nav {
   position: relative;
   top: 0;
@@ -9631,6 +9638,7 @@ nav {
   background-color: #27a9e1 !important; }
 
 h2.special-title {
+  word-wrap: break-word;
   font-family: 'Roboto';
   position: relative;
   display: inline-block;
@@ -9645,13 +9653,14 @@ h2.special-title {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 50%; }
+    width: 60px; }
     h2.special-title .border-bottom.white {
       border-color: #fff; }
     h2.special-title .border-bottom.orange {
       border-color: #f79420; }
 
 h2.special-title-2 {
+  word-wrap: break-word;
   font-family: 'Roboto Slab';
   font-weight: 300;
   font-size: 26pt;
@@ -9802,6 +9811,7 @@ p.gray-paragraph {
         background-color: #fff; }
       .section.scrollspy#skills .collapsible ul.within-collapsible-body {
         margin-left: 30px;
+        padding-right: 10px;
         /*				padding-top:15px;
 				padding-bottom:15px;
 */ }
@@ -9814,6 +9824,9 @@ p.gray-paragraph {
     .section.scrollspy#skills img.graphic {
       height: 200px;
       margin: 0 auto; }
+      @media only screen and (max-width: 768px) {
+        .section.scrollspy#skills img.graphic {
+          margin-top: 100px; } }
   .section.scrollspy#contact {
     color: #fff;
     background-color: #27a9e1; }
@@ -9825,7 +9838,10 @@ p.gray-paragraph {
       border: none; }
       .section.scrollspy#contact .collection .collection-super-header {
         background-color: #0288bc;
-        min-height: 150px; }
+        min-height: 150px;
+        background-image: url("/images/contact-header-personal.jpg");
+        background-size: cover;
+        background-position: top center; }
       .section.scrollspy#contact .collection h4 {
         font-size: 16pt;
         font-weight: 300;

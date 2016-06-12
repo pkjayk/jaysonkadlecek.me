@@ -35,7 +35,7 @@ if($c=="0"){
 	$return["success"]="y";
 	$return["finalMessage"]="Thank you for emailing me!  I will get back to you within the next 24 hours.";
 
-	$to      = 'jayson@jaysonkadlecek.me';
+	$to      = 'jayson@kadalystdesign.com';
 	$subject = 'Message from ' . $_POST["first_name"] . ' ' . $_POST['last_name'];
 	$message = '<p>A message was sent to you via the contact form on jaysonkadlecek.me. </p><p> Name: ' . $_POST["first_name"] . ' ' . $_POST["last_name"] . '</p><p> Phone Number: ' . $_POST["phone"] . ' </p><p>Email: ' . $_POST["email"] . '</p><p>Message:<br>' . $_POST["message"] . '</p><p></p>';
 	$headers = 'From: hi@jaysonkadlecek.me' . "\r\n" .
